@@ -21,8 +21,8 @@ export const chatResponse = async (req: RequestWithChatId, res: Response) => {
 
     console.log("req : ", req.body.chatId)
     const index = pc.index("dfccchatbot");
-    const namespace = index.namespace('frimi-data')
-    //frimi-data
+    const namespace = index.namespace('sanasa-data')
+    //sanasa-data
 
     let userChatId = req.body.chatId || "";
     let language = req.body.language;
@@ -330,7 +330,7 @@ Standalone question:`
             //   });
 
             //   const ids = fileIds.map(file => file.file_id);
-            // const fetchResult = await index.namespace('frimi-data').fetch(ids);
+            // const fetchResult = await index.namespace('sanasa-data').fetch(ids);
             // const documents = Object.values(fetchResult.records).map(record => {
             //     if (record.metadata) {
             //         return record.metadata.Title;
