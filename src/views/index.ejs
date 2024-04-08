@@ -119,6 +119,9 @@
       line-height: 20px;
       font-family: "Poppins", sans-serif;
     }
+    .chat-submit-button:hover{
+      background-color: #0084cb;
+    }
 
     #questionForm {
       position: relative;
@@ -153,7 +156,7 @@
       font-family: "Poppins", sans-serif;
       font-size: 12px;
       border-radius: 15px;
-      background-color: #A90e09;
+      background-color: #0084cb;
       border: none;
       color: #fff;
       width: 100%;
@@ -209,21 +212,22 @@
 <body class="background">
   <div class="container my-0 p-0">
     <div class="d-flex chat-header w-100 py-2 text-center justify-content-between align-items-center">
-      <img src="../chat-top-bar.webp" alt="" class="px-3 py-2">
+      <img src="../sdb-logo-en.png" alt="" class="px-3 py-2" style="height: 50px; width: auto">
       <!-- <button class="closeButton"><i class="bi bi-x-lg"></i></button> -->
     </div>
 
     <div class="d-flex chat-container">
       <div id="response" class="">
         <div class="d-flex justify-content-center align-items-center">
-          <img src="../chat-logo.webp" alt="" class="px-3 py-2 mb-3">
+          <!-- <img src="../chat-logo.webp" alt="" class="px-3 py-2 mb-3"> -->
         </div>
-        <div class="bot-message"><img class="message-image" src="/chat-header.webp">
+        <div class="bot-message">
+          <img class="message-image" src="/chat-header.webp">
           <div>
             <img src="../language-img.webp" alt="" class="px-3 py-2 mb-3 img-fluid">
-            <p class="mb-2">Hello, Welcome to DFCC Bank. Please select the language to get started.</p>
-            <p class="mb-2">ආයුබෝවන්, DFCC බැංකුව වෙත ඔබව සාදරයෙන් පිළිගනිමු. කරුණාකර ආරම්භ කිරීමට භාෂාව තෝරන්න.</p>
-            <p class="mb-2">வணக்கம், DFCC வங்கிக்கு வரவேற்கிறோம். தொடங்குவதற்கு மொழியைத் தேர்ந்தெடுக்கவும்.</p>
+            <p class="mb-2">Hello, Welcome to SDB Bank. Please select the language to get started.</p>
+            <p class="mb-2">ආයුබෝවන්, SDB බැංකුව වෙත ඔබව සාදරයෙන් පිළිගනිමු. කරුණාකර ආරම්භ කිරීමට භාෂාව තෝරන්න.</p>
+            <p class="mb-2">வணக்கம், SDB வங்கிக்கு வரவேற்கிறோம். தொடங்குவதற்கு மொழியைத் தேர்ந்தெடுக்கவும்.</p>
             <span class="d-flex flex-row language-buttons w-100 p-0 m-0">
               <span class="col-4 pe-1">
                 <button id="changeToEnglishButton">English</button>
