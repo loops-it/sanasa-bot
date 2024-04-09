@@ -206,6 +206,30 @@
       padding: 0px;
 
     }
+    @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.loading {
+  animation: fadeIn 0.5s ease-in-out infinite alternate, visible 0.5s ease-in-out infinite alternate;
+}
   </style>
 </head>
 
@@ -308,7 +332,8 @@
 
         // Change button icon to three dots
         const submitButton = document.querySelector('.chat-submit-button');
-        submitButton.innerHTML = '<i class="bi bi-three-dots"></i>';
+        submitButton.innerHTML = '<i class="bi bi-three-dots loading"></i>';
+        submitButton.disabled = true;
 
         let chatId = localStorage.getItem('chatId');
         console.log("generated chat id : ", chatId)
@@ -342,6 +367,8 @@
 
         // Clear the question input
         questionInput.value = '';
+        submitButton.innerHTML = '<i class="bi bi-send"></i>';
+        submitButton.disabled = false;
 
       } catch (error) {
         console.error("Error submitting question:", error);
@@ -352,8 +379,8 @@
         questionInput.disabled = false;
 
         // Change button icon back to send icon
-        const submitButton = document.querySelector('.chat-submit-button');
-        submitButton.innerHTML = '<i class="bi bi-send"></i>';
+        // const submitButton = document.querySelector('.chat-submit-button');
+        // submitButton.innerHTML = '<i class="bi bi-send"></i>';
       }
     });
 
